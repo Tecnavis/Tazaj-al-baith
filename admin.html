@@ -97,6 +97,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Food Menu</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
             <style>
                 .edit-btn, .delete-btn, .add-btn {
                     cursor: pointer;
@@ -160,8 +161,8 @@
                                                 </h5>
                                                 <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
                                                 <div class="d-flex">
-                                                    <i class="fas fa-edit edit-btn" data-item-id="1"></i>
-                                                    <i class="fas fa-trash delete-btn" data-item-id="1"></i>
+                                                    <i class="fas fa-edit edit-btn"></i>
+                                                    <i class="fas fa-trash delete-btn"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,57 +232,63 @@
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    document.body.addEventListener('click', function (event) {
-                        if (event.target.classList.contains('delete-btn')) {
-                            const itemId = event.target.getAttribute('data-item-id');
-                            deleteMenuItem(itemId, event.target);
-                        }
-                    });
-                });
+
+document.getElementById('addItemForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const itemName = document.getElementById('itemName').value;
+    const itemDescription = document.getElementById('itemDescription').value;
+    const itemPrice = document.getElementById('itemPrice').value;
+    const itemImage = document.getElementById('itemImage').files[0];
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const imageSrc = e.target.result;
+
+        const newItem = document.createElement('div');
+        newItem.classList.add('col-lg-6', 'menuitem');
+        newItem.innerHTML = `
+            <div class="d-flex align-items-center">
+                <img class="flex-shrink-0 img-fluid rounded" src="${imageSrc}" alt="" style="width: 80px;">
+                <div class="w-100 d-flex flex-column text-start ps-4">
+                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                        <span>${itemName}</span>
+                        <span class="text-primary">$${itemPrice}</span>
+                    </h5>
+                    <small class="fst-italic">${itemDescription}</small>
+                    <div class="d-flex">
+                        <i class="fas fa-edit edit-btn"></i>
+                        <i class="fas fa-trash delete-btn"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Append the new item to the breakfast tab for demonstration
+        document.getElementById('breakfast-items').appendChild(newItem);
+
+        // Reset the form and close the modal
+        document.getElementById('addItemForm').reset();
+        $('#addItemModal').modal('hide');
+    }
+    reader.readAsDataURL(itemImage);
+});
+
+// Event delegation to handle delete button clicks
+document.getElementById('breakfast-items').addEventListener('click', function(event) {
+    if (event.target.classList.contains('delete-btn')) {
+        const menuItem = event.target.closest('.menuitem');
+        if (menuItem) {
+            menuItem.remove();
+        }
+    }
+});
+
+            </script>
+        </body>
+        </html>
         
-                function deleteMenuItem(itemId, deleteButton) {
-                    const menuItem = deleteButton.closest('.col-lg-6');
-                    if (menuItem) {
-                        menuItem.remove();
-                    }
-                }
-        
-                document.getElementById('addItemForm').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    const itemName = document.getElementById('itemName').value;
-                    const itemDescription = document.getElementById('itemDescription').value;
-                    const itemPrice = document.getElementById('itemPrice').value;
-                    const itemImage = document.getElementById('itemImage').files[0];
-                    
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const imageSrc = e.target.result;
-                        
-                        const newItemId = Date.now(); // Use a unique ID for each new item
-                        const newItem = `
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="${imageSrc}" alt="" style="width: 80px;">
-                                    <div class="w-100 d-flex flex-column text-start ps-4">
-                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>${itemName}</span>
-                                            <span class="text-primary">$${itemPrice}</span>
-                                        </h5>
-                                        <small class="fst-italic">${itemDescription}</small>
-                                        <div class="d-flex">
-                                            <i class="fas fa-edit edit-btn" data-item-id="${newItemId}"></i>
-                                            <i class="fas fa-trash delete-btn" data-item-id="${newItemId}"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        
-                        // Append the new item to the breakfast tab for demonstration
-                        document.getElementById('breakfast
-        
+
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -354,12 +361,30 @@
 
 
     <!-- Password Modal -->
-<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="passwordModalLabel">Enter Password</h5> -->
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            <!-- </div>
+            <div class="modal-body">
+                <form id="passwordForm">
+                    <div class="mb-3">
+                        <label for="passwordInput" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="passwordInput" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="passwordModalLabel">Enter Password</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="passwordForm">
@@ -390,28 +415,29 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- <script>
-        $(document).ready(function() {
-            // Show the password modal when the page loads
-            $('#passwordModal').modal('show');
-    
-            // Handle form submission
-            $('#passwordForm').submit(function(event) {
-                event.preventDefault();
-                // Check if the password entered is correct
-                var password = $('#passwordInput').val();
-                if (password === 'tazaj123') {
-                    // Password is correct, allow access
-                    $('#passwordModal').modal('hide');
-                } else {
-                    // Incorrect password, show error or do something else
-                    alert('Incorrect password. Please try again.');
-                    // Optionally, clear the input field
-                    $('#passwordInput').val('');
-                }
-            });
-        });
-    </script> -->
+    <script>
+       $(document).ready(function() {
+    // Show the password modal when the page loads
+    $('#passwordModal').modal('show');
+
+    // Handle form submission
+    $('#passwordForm').submit(function(event) {
+        event.preventDefault();
+        // Check if the password entered is correct
+        var password = $('#passwordInput').val();
+        if (password === 'tazaj123') {
+            // Password is correct, allow access
+            $('#passwordModal').modal('hide');
+        } else {
+            // Incorrect password, show error or do something else
+            alert('Incorrect password. Please try again.');
+            // Optionally, clear the input field
+            $('#passwordInput').val('');
+        }
+    });
+});
+
+    </script>
     
 </body>
 
