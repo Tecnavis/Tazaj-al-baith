@@ -227,6 +227,9 @@
                 </div>
             </div>
             <!-- Add Item Modal End -->
+
+
+            
         
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -245,6 +248,11 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
     reader.onload = function(e) {
         const imageSrc = e.target.result;
 
+        // Determine the active tab
+        const activeTab = document.querySelector('.tab-pane.active.show');
+        const tabId = activeTab.id; // will be 'tab-1', 'tab-2', or 'tab-3'
+
+        // Create a new item element
         const newItem = document.createElement('div');
         newItem.classList.add('col-lg-6', 'menuitem');
         newItem.innerHTML = `
@@ -264,8 +272,8 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
             </div>
         `;
 
-        // Append the new item to the breakfast tab for demonstration
-        document.getElementById('breakfast-items').appendChild(newItem);
+        // Append the new item to the corresponding tab
+        document.getElementById(tabId).querySelector('.row').appendChild(newItem);
 
         // Reset the form and close the modal
         document.getElementById('addItemForm').reset();
@@ -274,14 +282,16 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
     reader.readAsDataURL(itemImage);
 });
 
-// Event delegation to handle delete button clicks
-document.getElementById('breakfast-items').addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete-btn')) {
-        const menuItem = event.target.closest('.menuitem');
-        if (menuItem) {
-            menuItem.remove();
+// Event delegation to handle delete button clicks for all items
+document.querySelectorAll('.tab-content').forEach(tabContent => {
+    tabContent.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-btn')) {
+            const menuItem = event.target.closest('.menuitem');
+            if (menuItem) {
+                menuItem.remove();
+            }
         }
-    }
+    });
 });
 
             </script>
