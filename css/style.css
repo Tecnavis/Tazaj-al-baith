@@ -158,7 +158,7 @@
     background-size: cover;
 }
 
-.hero-header img {
+.rotating-image{
     animation: imgRotate 50s linear infinite;
 }
 
