@@ -30,6 +30,29 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    .typing-logo {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 4em; /* Increase font size */
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 4px solid;
+        width: 0;
+        animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: black; }
+    }
+</style>
+
 </head>
 
 <body>
@@ -48,7 +71,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1> -->
-                    <img src="img/tazaj-logo.png" alt="Logo">
+                    <img src="img/tazaj-logo.png" alt="Logo"class="typing-logo" ;>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -74,11 +97,16 @@
             </nav>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
+                            <!-- <img src="img/tazaj-logo.png" alt="Logo" style="height: 100px;"> -->
+
+                            
+                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our  <br>Delicious Meal</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2">Welcome to Tazaj Al Baith! Discover our mouth-watering menu featuring juicy burgers, crispy fried chicken, and savory sandwiches. Each dish is crafted with fresh ingredients to satisfy your cravings. Explore our offerings and enjoy delicious flavors delivered right to your doorstep.</p>
+                            
                             <a href="contact.html" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Contact us</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden w-90" style=";">
@@ -98,37 +126,50 @@
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3" >
-                            <div class="p-4" style="height: 200px;">
+                            <div class="p-4" style="height: 250px;">
                                 <i class="fa fa-3x fa-map-marker-alt text-primary mb-4"></i>
                                 <h5>Al Makhwah</h5>
                                 <p>Al Makhwah 65311, Saudi Arabia</p>
+                                <a href="tel:0508507603">
+                                    <i class="fa fa-phone text-primary mb-2"></i> 0508507603
+                                    </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
-                            <div class="p-4" style="height: 200px;">
+                            <div class="p-4" style="height: 250px;">
                                 <i class="fa fa-3x fa-map-marker-alt text-primary mb-4"></i>
                                 <h5>Al Bahah</h5>
                                 <p> طريق الجنوب, Shahbah, Saudi Arabia</p>
+                                <a href="tel:0533005191">
+                                    <i class="fa fa-phone text-primary mb-2"></i> 0533005191
+                                    </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
-                            <div class="p-4" style="height: 200px;">
+                            <div class="p-4" style="height: 250px;">
                                 <i class="fa fa-3x fa-map-marker-alt text-primary mb-4"></i>
                                 <h5>Namerah</h5>
                                 <p>Namerah 65466, Saudi Arabia</p>
+                                <a href="tel:0500772251">
+                                    <i class="fa fa-phone text-primary mb-2"></i> 0500772251
+                                    </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
-                            <div class="p-4" style="height: 200px;">
+                            <div class="p-4" style="height: 250px;">
                                 <i class="fa fa-3x fa-map-marker-alt text-primary mb-4"></i>
                                 <h5>Bariq </h5>
                                 <p>Bariq 63897, Saudi Arabia</p>
+                                <a href="tel:0537735431">
+                                    <i class="fa-solid fa-phone text-primary mb-2"></i> 0537735431
+                                  </a>
+                                  
                             </div>
                         </div>
                     </div>
@@ -173,16 +214,16 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-5.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/aboutabout3.jpg">
                             </div>
                             <div class="col-6 text-start">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about7 (1).jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about7 (2).jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/aboutabut1.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about7 (3).jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/aboutabout2.jpg">
                             </div>
                         </div>
                     </div>
@@ -198,24 +239,24 @@
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
                                     <div class="ps-4">
-                                        <p class="mb-0">Years of</p>
-                                        <h6 class="text-uppercase mb-0">Expertise</h6>
+                                        <p class="mb-0">Popular</p>
+                                        <h6 class="text-uppercase mb-0">Dishes</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">500</h1>
                                     <div class="ps-4">
-                                        <p class="mb-0">Popular</p>
-                                        <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                        <p class="mb-0">satisfaid</p>
+                                        <h6 class="text-uppercase mb-0">Customers</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="#service">Read More</a>
                     </div>
                 </div>
             </div>
@@ -873,38 +914,43 @@
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <p>We tried different sandwiches while leaving Abhah, It is on the road going to taif. Good sandwiches
+                        </p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
+
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1">Awais Ahmad</h5>
+                                <!-- <small>Profession</small> -->
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <p>The chicken is fresh and fried well, also the garlic is delicious and the conduct of workers is lovely, 
+
+                        </p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1">ashraf al-3grood</h5>
+                                <!-- <small>Profession</small> -->
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
+                    <!-- <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
+
                             <div class="ps-3">
                                 <h5 class="mb-1">Client Name</h5>
                                 <small>Profession</small>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
+                    </div> -->
+                    <!-- <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                         <div class="d-flex align-items-center">
@@ -914,7 +960,7 @@
                                 <small>Profession</small>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -944,18 +990,18 @@
                         <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p> -->
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/i/flow/login?redirect_after_login=%2FTazajAlbait"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/100015969905907/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://youtube.com/@tazajalbait?si=7UXXsm2pg4-VfUzn"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/tazajalbait?igsh=ZXNuZmc0ZWV2eWFu"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
+                        <h5 class="text-light fw-normal">Monday - Sunday</h5>
+                        <p>1PM - 4AM</p>
+                        <!-- <h5 class="text-light fw-normal">Sunday</h5> -->
+                        <!-- <p>10AM - 08PM</p> -->
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
