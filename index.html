@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,80 +33,165 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-    .typing-logo {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 4em; /* Increase font size */
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 4px solid;
-        width: 0;
-        animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-    }
 
-    @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-    }
-
-    @keyframes blink-caret {
-        from, to { border-color: transparent; }
-        50% { border-color: black; }
-    }
-
-    /* Ensure the navbar sticks to the top when scrolling */
-.sticky-navbar {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Adjust if necessary to stay above other content */
-    background-color: #fff; /* Background color to ensure it's visible */
-    padding: 10px; /* Adjust padding as needed */
-}
-
-@keyframes jump {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-.logo-jump {
-    animation: jump 1s ease-in-out;
-}
-
-
-
-  .video-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures the video covers the entire container without distortion */
-}
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
 
-</style>
+    <style>
+        .typing-logo {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 4em;
+            /* Increase font size */
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+
+        /* Ensure the navbar sticks to the top when scrolling */
+        .sticky-navbar {
+            position: -webkit-sticky;
+            /* For Safari */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Adjust if necessary to stay above other content */
+            background-color: #fff;
+            /* Background color to ensure it's visible */
+            padding: 10px;
+            /* Adjust padding as needed */
+        }
+
+        @keyframes jump {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .logo-jump {
+            animation: jump 1s ease-in-out;
+        }
+
+
+
+        .video-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            /* Ensures the video covers the entire container without distortion */
+        }
+
+
+
+        .social-icons a {
+            font-size: 32px;
+            /* Larger icon size */
+        }
+
+        .social-icons a:hover {
+            opacity: 0.8;
+            /* Slight transparency on hover */
+        }
+
+        @media (max-width: 767px) {
+            .social-icons a {
+                font-size: 48px;
+                /* Even larger on mobile */
+            }
+
+            .social-icons {
+                margin-top: 20px;
+                /* Adjust spacing for mobile */
+            }
+        }
+
+
+
+
+        .vibrating-icon {
+            display: inline-block;
+            animation: vibrate 0.3s linear infinite;
+        }
+
+        @keyframes vibrate {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+
+
+
+  <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -113,34 +200,37 @@
 
 
         <!-- Navbar & Hero Start -->
+       
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1> -->
-                    <img src="img/tazaj-w&r.png" alt="Logo" ;>
+                    <img src="img/tazaj-w&r.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#service" class="nav-item nav-link">Service</a>
-                        <a href="#menu" class="nav-item nav-link">Menu</a>
+                        <div id="google_translate_element"></div>
+                        <a href="index.html" class="nav-item nav-link active" data-translate="home">Home</a>
+                        <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
+                        <a href="#service" class="nav-item nav-link" data-translate="service">Service</a>
+                        <a href="#menu" class="nav-item nav-link" data-translate="menu">Menu</a>
+                        
                         <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-translate="language">Choose your Language</a>
                             <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="#" class="dropdown-item" onclick="translate('en')">English</a>
+                                <a href="#" class="dropdown-item" onclick="translate('ar')">Arabic</a>
                             </div>
                         </div> -->
-                        <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+                        
+
                     </div>
-                    <a href="contact.html" class="btn btn-primary py-2 px-4">Contact us</a>
+                    <a href="contact.html" class="btn btn-primary py-2 px-4" data-translate="contact">Contact us</a>
                 </div>
             </nav>
+
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container my-5 py-5">
@@ -148,16 +238,22 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <img src="img/tazaj--logo.png" alt="Logo" class="logo-jump" style="height: 150px;">
                             <h1 class="display-3 text-white animated slideInLeft">Delicious <br> Discoveries</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Welcome to Tazaj Al Baith! Discover our mouth-watering menu featuring Fresh burgers, Broasted chicken, and savory sandwiches. Each dish is crafted with fresh ingredients to satisfy your cravings. Explore our offerings and enjoy delicious flavors delivered right to your doorstep.</p>
-                            <a href="contact.html" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Contact us</a>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Welcome to Tazaj Al Baith! Discover our
+                                mouth-watering menu featuring Fresh burgers, Broasted chicken, and savory sandwiches.
+                                Each dish is crafted with fresh ingredients to satisfy your cravings. Explore our
+                                offerings and enjoy delicious flavors delivered right to your doorstep.</p>
+                            <a href="contact.html"
+                                class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Contact us</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden w-90">
                             <img class="img-fluid rotation rotating-image" src="img/plater.png" alt="">
                             <div class="social-icons mt-4" style="margin-left: -20px;">
-                                <a href="https://www.facebook.com/people/Tazaj-Al-Bait/pfbid0HvzJjL2Xav165Naa8g2tn2V8ck38ZoAzuEALyq1ftQHokjUT7zpLGdijUFUcrFGjl/?mibextid=ZbWKwL" class="me-3">
+                                <a href="https://www.facebook.com/people/Tazaj-Al-Bait/pfbid0HvzJjL2Xav165Naa8g2tn2V8ck38ZoAzuEALyq1ftQHokjUT7zpLGdijUFUcrFGjl/?mibextid=ZbWKwL"
+                                    class="me-3">
                                     <i class="fab fa-facebook-f" style="color: #1a5ae4;"></i>
                                 </a>
-                                <a href="https://www.snapchat.com/add/tazajalbait/d--9txxuQwOPxYmWF6adDgAAgbm1rdmpheGZkAZFMKfRdAZFMKfEdAAAAAA?share_id=Mb99aFVaU5g&locale=en-GB" class="me-3">
+                                <a href="https://www.snapchat.com/add/tazajalbait/d--9txxuQwOPxYmWF6adDgAAgbm1rdmpheGZkAZFMKfRdAZFMKfEdAAAAAA?share_id=Mb99aFVaU5g&locale=en-GB"
+                                    class="me-3">
                                     <i class="fab fa-snapchat" style="color: #c3ea45;"></i>
                                 </a>
                                 <a href="https://www.instagram.com/tazajalbait?igsh=ZXNuZmc0ZWV2eWFu" class="me-3">
@@ -169,7 +265,7 @@
                                 <a href="https://www.youtube.com/@tazajalbait" class="me-3">
                                     <i class="fab fa-youtube" style="color: #ff0000;"></i>
                                 </a>
-                                <a href="https://tiktok.com">
+                                <a href="https://www.tiktok.com/@tazaj.albaith?_r=1&_d=eaadamb2g00ddk&sec_uid=MS4wLjABAAAAnGsf7bIuBpP5QXIWCueV5r10ZMZd4uotIzLeoXnMoxHLatnczLwuRn5zcHvuH09Q&share_author_id=7214162616300700673&sharer_language=en&source=h5_m&u_code=e74ae5jb1cd9ei&ug_btm=b8727,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAAnGsf7bIuBpP5QXIWCueV5r10ZMZd4uotIzLeoXnMoxHLatnczLwuRn5zcHvuH09Q&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=7214162616300700673&share_link_id=8CADC32E-1639-496A-A701-6612222CF77A&share_app_id=1233">
                                     <i class="fab fa-tiktok" style="color: #decccc;"></i>
                                 </a>
                             </div>
@@ -177,45 +273,8 @@
                     </div>
                 </div>
             </div>
-            
-            <style>
-            .social-icons a {
-                font-size: 32px; /* Larger icon size */
-            }
-            
-            .social-icons a:hover {
-                opacity: 0.8; /* Slight transparency on hover */
-            }
-            
-            @media (max-width: 767px) {
-                .social-icons a {
-                    font-size: 48px; /* Even larger on mobile */
-                }
-                .social-icons {
-                    margin-top: 20px; /* Adjust spacing for mobile */
-                }
-            }
 
-
-
-
-            .vibrating-icon {
-    display: inline-block;
-    animation: vibrate 0.3s linear infinite;
-}
-
-@keyframes vibrate {
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
-}
-
-            </style>
-            
-        </div>
+         </div>
         <!-- Navbar & Hero End -->
 
 
@@ -225,7 +284,7 @@
                 <h1 style="text-align: center;"> our stores</h1>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded pt-3" >
+                        <div class="service-item rounded pt-3">
                             <div class="p-4" style="height: 250px;">
                                 <i class="fa fa-3x fa-map-marker-alt text-primary mb-4"></i>
                                 <h5>Al Makhwah</h5>
@@ -233,7 +292,7 @@
                                 <a href="tel:0508507603">
                                     <i class="fa fa-phone text-primary mb-2 vibrating-icon"></i>
                                     0508507603
-                                    </a>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +305,7 @@
                                 <a href="tel:0533005191">
                                     <i class="fa fa-phone text-primary mb-2 vibrating-icon"></i>
                                     0533005191
-                                    </a>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -259,7 +318,7 @@
                                 <a href="tel:0500772251">
                                     <i class="fa fa-phone text-primary mb-2 vibrating-icon"></i>
                                     0500772251
-                                    </a>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -272,39 +331,12 @@
                                 <a href="tel:0537735431">
                                     <i class="fa fa-phone text-primary mb-2 vibrating-icon"></i>
                                     0537735431
-                                  </a>
-                                  
+                                </a>
+
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
-                                <h5>Master Chefs</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div> -->
-                    
-                    <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-                                <h5>Online Order</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
-                                <h5>24/7 Service</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div> -->
+
                 </div>
             </div>
         </div>
@@ -318,32 +350,40 @@
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="./img/tazajabout3.png">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+                                    src="./img/tazajabout3.png">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="./img/tazajabout2.png" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"
+                                    src="./img/tazajabout2.png" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/tazajabout1.png">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
+                                    src="img/tazajabout1.png">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/tazajabout4.png">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                                    src="img/tazajabout4.png">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Tazaj Al baith</h1>
-                        <p class="mb-4">At Tazaj Al Baith, we are dedicated to serving delicious and high-quality food to our valued customers. Our menu features a variety of mouth-watering options, including crispy fried chicken, golden fries, hearty sandwiches, juicy burgers, and flavorful wraps.
+                        <p class="mb-4">At Tazaj Al Baith, we are dedicated to serving delicious and high-quality food
+                            to our valued customers. Our menu features a variety of mouth-watering options, including
+                            crispy fried chicken, golden fries, hearty sandwiches, juicy burgers, and flavorful wraps.
 
                         </p>
-                        <p class="mb-4">Whether you're looking for a quick bite, a family meal, or a place to relax with friends, Tazaj Al Baith is the perfect destination. Come and taste the difference today!
+                        <p class="mb-4">Whether you're looking for a quick bite, a family meal, or a place to relax with
+                            friends, Tazaj Al Baith is the perfect destination. Come and taste the difference today!
 
                         </p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50
+                                    </h1>
                                     <div class="ps-4">
                                         <p class="mb-0">Popular</p>
                                         <h6 class="text-uppercase mb-0">Dishes</h6>
@@ -352,7 +392,8 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">500</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">500
+                                    </h1>
                                     <div class="ps-4">
                                         <p class="mb-0">satisfaid</p>
                                         <h6 class="text-uppercase mb-0">Customers</h6>
@@ -379,174 +420,130 @@
                         </video>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 bg-dark d-flex align-items-center">
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Our Mission</h5>
-                     <p>"Our mission is to serve up more than just a meal - we aim to provide an exceptional dining experience that leaves a lasting impression. We're dedicated to quality, community, and hospitality, every time, every guest."</p>
-                     <h5 class="section-title ff-secondary text-start text-primary fw-normal"> رؤيتنا</h5>
-                     <p> 
-                         لقد ابتكر طهاتنا قائمة من الوجبات   تجمع بين النكهات والمكونات الطازجة التي يتم الحصول عليها من مصادر محلية، مما يضمن الاستمتاع بكل لقمة. من الوجبات المفضلة إلى اللمسات المبتكرة، هناك ما يناسب الجميع في </p>
-                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Our Vision</h5>
-                        
-                       
-                     <p>Our chefs have crafted a menu that blends flavors with fresh, locally-sourced ingredients, ensuring every bite is a delight. From classic favorites to innovative twists, there's something for everyone at TAZAJ ALBAIT</p>
-                     <h5 class="section-title ff-secondary text-start text-primary fw-normal"> مهمتنا</h5>
-                     <p> 
-                         "مهمتنا هي تقديم أكثر من مجرد وجبة طعام - هدفنا هو توفير تجربة طعام استثنائية تترك انطباعًا دائمًا. نحن ملتزمون بالجودة</p>
-                     
-                     <!-- <h1 class="text-white mb-4">Book A Table Online</h1> -->
+                        <p>"Our mission is to serve up more than just a meal - we aim to provide an exceptional dining
+                            experience that leaves a lasting impression. We're dedicated to quality, community, and
+                            hospitality, every time, every guest."</p>
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal"> رؤيتنا</h5>
+                        <p>
+                            لقد ابتكر طهاتنا قائمة من الوجبات تجمع بين النكهات والمكونات الطازجة التي يتم الحصول عليها
+                            من مصادر محلية، مما يضمن الاستمتاع بكل لقمة. من الوجبات المفضلة إلى اللمسات المبتكرة، هناك
+                            ما يناسب الجميع في </p>
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Our Vision</h5>
 
-                     
-                     <!-- <form>
 
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="select1">
-                                            <option value="1">People 1</option>
-                                            <option value="2">People 2</option>
-                                            <option value="3">People 3</option>
-                                        </select>
-                                        <label for="select1">No Of People</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                                </div>
+                        <p>Our chefs have crafted a menu that blends flavors with fresh, locally-sourced ingredients,
+                            ensuring every bite is a delight. From classic favorites to innovative twists, there's
+                            something for everyone at TAZAJ ALBAIT</p>
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal"> مهمتنا</h5>
+                        <p>
+                            "مهمتنا هي تقديم أكثر من مجرد وجبة طعام - هدفنا هو توفير تجربة طعام استثنائية تترك انطباعًا
+                            دائمًا. نحن ملتزمون بالجودة</p>
+
+                        <!-- <h1 class="text-white mb-4">Book A Table Online</h1> -->
+
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5" id="service">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Our Services</h5>
+                    <h1 class="mb-5">Explore Our Services</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
+
+
+                                <h5> Quality Ingredients</h5>
+                                <p>Crafting exquisite dishes with premium ingredients for unparalleled culinary
+                                    satisfaction and delight</p>
                             </div>
-                        </form> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <h5>Quality Food</h5>
+                                <p>Exquisite dishes prepared with the finest ingredients for exceptional dining
+                                    experiences."
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-wallet text-primary mb-4"></i>
+                                <h5> Affordable Pricing</h5>
+                                <p>Delicious meals at affordable prices, ensuring satisfaction without breaking the
+                                    bank.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-sync-alt text-primary mb-4"></i>
+
+                                <h5>24/7 Service</h5>
+                                <p>2Round-the-clock service to satisfy your cravings any time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-carrot text-primary mb-4"></i>
+                                <h5>Freshness Guaranteed</h5>
+                                <p>Every dish, guaranteed fresh to delight your taste buds."
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-shopping-bag text-primary mb-4"></i>
+                                <!-- Recycle icon -->
+                                <h5> Home delivery</h5>
+                                <p>Convenient home delivery bringing our flavors to your doorstep.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-pizza-slice text-primary mb-4"></i>
+
+                                <h5> Family-Friendly Meals</h5>
+                                <p>"Delicious meals designed to bring families together.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4" style="height: 250px;">
+                                <i class="fa fa-3x fa-star text-primary mb-4"></i>
+                                <h5>Superior Service </h5>
+                                <p>Exceptional service that exceeds expectations.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-
-
-
-
-
-                <!-- Service Start -->
-                <div class="container-xxl py-5" id="service">
-                    <div class="container">
-                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Our Services</h5>
-                            <h1 class="mb-5">Explore Our Services</h1>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
-
-
-                                        <h5> Quality Ingredients</h5>
-                                        <p>Crafting exquisite dishes with premium ingredients for unparalleled culinary satisfaction and delight</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
-                                        <h5>Quality Food</h5>
-                                        <p>Exquisite dishes prepared with the finest ingredients for exceptional dining experiences."
-
-
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-wallet text-primary mb-4"></i>
-                                        <h5> Affordable Pricing</h5>
-                                        <p>Delicious meals at affordable prices, ensuring satisfaction without breaking the bank.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-sync-alt text-primary mb-4"></i>
-
-                                        <h5>24/7 Service</h5>
-                                        <p>2Round-the-clock service to satisfy your cravings any time.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-carrot text-primary mb-4"></i>
-                                        <h5>Freshness Guaranteed</h5>
-                                        <p>Every dish, guaranteed fresh to delight your taste buds."
-
-
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-shopping-bag text-primary mb-4"></i>
-<!-- Recycle icon -->
-                                           <h5> Home delivery</h5>
-                                        <p>Convenient home delivery bringing our flavors to your doorstep.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-pizza-slice text-primary mb-4"></i>
-
-                                        <h5> Family-Friendly Meals</h5>
-                                        <p>"Delicious meals designed to bring families together.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                                <div class="service-item rounded pt-3">
-                                    <div class="p-4" style="height: 250px;">
-                                        <i class="fa fa-3x fa-star text-primary mb-4"></i>
-                                        <h5>Superior  Service </h5>
-                                        <p>Exceptional service that exceeds expectations.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service End -->
+        <!-- Service End -->
 
         <!-- Menu Start -->
         <div class="container-xxl py-5" id="menu">
@@ -558,25 +555,29 @@
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                                href="#tab-1">
                                 <i class="fas fa-hotdog fa-2x text-primary"></i>
-                                  <div class="ps-3">
+                                <div class="ps-3">
                                     <small class="text-body">Perfectly Grilled</small>
                                     <h6 class="mt-n1 mb-0">Sandwiches</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-drumstick-bite fa-2x text-primary"></i>                                <div class="ps-3">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill"
+                                href="#tab-2">
+                                <i class="fa fa-drumstick-bite fa-2x text-primary"></i>
+                                <div class="ps-3">
                                     <small class="text-body">Share the Joy</small>
                                     <h6 class="mt-n1 mb-0">platters</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                                href="#tab-3">
+
                                 <i class="fa fa-hamburger fa-2x text-primary"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Savor the Moment</small>
@@ -584,14 +585,15 @@
                                 </div>
                             </a>
                         </li>
-                       
+
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/9.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/9.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Zinger</span>
@@ -603,7 +605,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/10.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/10.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Steak sandwich</span>
@@ -616,7 +619,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/11.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/11.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chiken Fajthas</span>
@@ -626,10 +630,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/13.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/13.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Albaith Sandwich</span>
@@ -641,7 +646,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/14.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/14.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Fish Fillet Roll</span>
@@ -653,7 +659,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/16.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/16.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Zinger Roll</span>
@@ -665,7 +672,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/17.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/17.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken steak Roll</span>
@@ -675,10 +683,11 @@
                                         </div>
                                     </div>
                                 </div>
-                               
+
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/18.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/18.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span> Grilled Chicken Roll</span>
@@ -690,7 +699,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/19.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/19.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Tortila Roll</span>
@@ -706,7 +716,8 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/23.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/23.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Broast</span>
@@ -718,7 +729,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/22.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/22.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Nuggets</span>
@@ -730,7 +742,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/25.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/25.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span> Zinger Chicken </span>
@@ -742,7 +755,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/26.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/26.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span> Strip Chicken </span>
@@ -754,7 +768,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/27.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/27.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Shrimp plate</span>
@@ -766,7 +781,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/28.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/28.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Quesedilla</span>
@@ -778,7 +794,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/29.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/29.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>cheezy Fries Chicken </span>
@@ -788,14 +805,15 @@
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                         <div id="tab-3" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/1.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/1.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span> Grilled Albait Chicken Burger</span>
@@ -807,7 +825,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/2.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/2.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Zinger Burger</span>
@@ -819,7 +838,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/3.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/3.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Burger</span>
@@ -831,7 +851,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/4.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/4.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Ceasar Salads</span>
@@ -843,7 +864,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/5.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/5.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Coleslaw</span>
@@ -855,7 +877,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/6.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/6.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Chicken Shawarma</span>
@@ -867,7 +890,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/7.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/7.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Shawarma Arabi</span>
@@ -879,7 +903,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/8.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/8.png" alt=""
+                                            style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Shawarma Baska</span>
@@ -891,7 +916,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/15.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/15.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Tazaj party Sandwich Box</span>
@@ -903,7 +929,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/30.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/30.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Meals</span>
@@ -915,7 +942,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/31.png" alt="" style="width: 80px;">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="./img/menu items/31.png"
+                                            alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Meals</span>
@@ -925,7 +953,7 @@
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -934,103 +962,7 @@
         </div>
         <!-- Menu End -->
 
-
-        
-
-        <!-- Reservation Start -->
-      
-        
-        <!-- <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
-            <!-- <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body"> -->
-                        <!-- 16:9 aspect ratio -->
-                        <!-- <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Reservation Start -->
-
-
-        <!-- Team Start -->
-        <!-- <div class="container-xxl pt-5 pb-3">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
-                    <h1 class="mb-5">Our Master Chefs</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Team End -->
-
-
-        <!-- Testimonial Start -->
+       <!-- Testimonial Start -->
         <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="text-center">
@@ -1040,10 +972,12 @@
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Tasty food, accurate service, friendly staff. New items: strips, twister, albaith sandwich, cheesy fries.
- </p>
+                        <p>Tasty food, accurate service, friendly staff. New items: strips, twister, albaith sandwich,
+                            cheesy fries.
+                        </p>
                         <div class="d-flex align-items-center">
-                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle"
+                                style="width: 50px; height: 50px;"></i>
 
                             <div class="ps-3">
                                 <h5 class="mb-1">shajid kv</h5>
@@ -1053,16 +987,12 @@
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Great shawarma, friendly staff, limited space, mostly men dine-in, occasionally women. Overall, good place.
-
-
-
-
-
-
+                        <p>Great shawarma, friendly staff, limited space, mostly men dine-in, occasionally women.
+                            Overall, good place.
                         </p>
                         <div class="d-flex align-items-center">
-                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle"
+                                style="width: 50px; height: 50px;"></i>
                             <div class="ps-3">
                                 <h5 class="mb-1">Annalie Pagdilao</h5>
                                 <!-- <small>Profession</small> -->
@@ -1073,16 +1003,10 @@
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Fresh chicken, delicious garlic, lovely workers. I'd rate them 4 out of 5 stars.
-
-
-
-
-
-
-
                         </p>
                         <div class="d-flex align-items-center">
-                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle"
+                                style="width: 50px; height: 50px;"></i>
                             <div class="ps-3">
                                 <h5 class="mb-1">ashraf al-3grood</h5>
                                 <!-- <small>Profession</small> -->
@@ -1092,51 +1016,22 @@
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p> Tried different sandwiches on the road to Taif from Abhah. Good sandwiches!
-
-
-
-
-
-
-
-
                         </p>
                         <div class="d-flex align-items-center">
-                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
+                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle"
+                                style="width: 50px; height: 50px;"></i>
                             <div class="ps-3">
                                 <h5 class="mb-1">Awais Ahmad</h5>
                                 <!-- <small>Profession</small> -->
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <i class="fa-solid fa-user img-fluid flex-shrink-0 rounded-circle" style="width: 50px; height: 50px;"></i>
 
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
         <!-- Testimonial End -->
-        
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -1154,17 +1049,25 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Reach out us</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>9407 طريق الجنوب, Shahbah, Al Bahah 65721, Saudi Arabia</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>9407 طريق الجنوب, Shahbah, Al Bahah
+                            65721, Saudi Arabia</p>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Namerah 65466, Saudi Arabia</p>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bariq 63897, Saudi Arabia</p>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Al Makhwah 65311, Saudi Arabia</p>
                         <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p> -->
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/i/flow/login?redirect_after_login=%2FTazajAlbait"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/100015969905907/"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://youtube.com/@tazajalbait?si=7UXXsm2pg4-VfUzn"><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/tazajalbait?igsh=ZXNuZmc0ZWV2eWFu"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://twitter.com/i/flow/login?redirect_after_login=%2FTazajAlbait"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://m.facebook.com/100015969905907/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://youtube.com/@tazajalbait?si=7UXXsm2pg4-VfUzn"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://www.instagram.com/tazajalbait?igsh=ZXNuZmc0ZWV2eWFu"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -1178,8 +1081,10 @@
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
                         <p>Discover deliciousness with every bite. Fresh, flavorful, and crafted to perfection</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Your email">
+                            <button type="button"
+                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
                     </div>
                 </div>
@@ -1188,10 +1093,11 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Tazaj al baith</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed  and developed By <a class="border-bottom" href="https://www.tecnavis.com/">Tecnavis</a><br><br>
+                            &copy; <a class="border-bottom" href="#">Tazaj al baith</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed and developed By <a class="border-bottom"
+                                href="https://www.tecnavis.com/">Tecnavis</a><br><br>
                             <!-- Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
                         </div>
                         <div class="col-md-6 text-center text-md-end">
@@ -1227,6 +1133,35 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <div id="google_translate_element"></div>
+   <script>
+    function translatePage(lang) {
+    if (lang === 'ar') {
+        google.translate.TranslateElement.getInstance().setEnabled(true);
+        google.translate.TranslateElement.getInstance().setLanguage('ar');
+    } else if (lang === 'en') {
+        google.translate.TranslateElement.getInstance().setEnabled(true);
+        google.translate.TranslateElement.getInstance().setLanguage('en');
+    }
+}
+
+   </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+<script>
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en', // Default language of your site
+        includedLanguages: 'ar,en', // Languages you want to include
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    googleTranslateElementInit();
+});
+
+</script>
 </body>
 
 </html>

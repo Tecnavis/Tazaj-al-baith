@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="...">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </head>
 
@@ -58,6 +59,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
+                        <div id="google_translate_element"></div>
                         <a href="index.html" class="nav-item nav-link ">Home</a>
                         <a href="index.html" class="nav-item nav-link">About</a>
                         <a href="index.html" class="nav-item nav-link">Service</a>
@@ -359,7 +361,34 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
+    <script>
+        function translatePage(lang) {
+        if (lang === 'ar') {
+            google.translate.TranslateElement.getInstance().setEnabled(true);
+            google.translate.TranslateElement.getInstance().setLanguage('ar');
+        } else if (lang === 'en') {
+            google.translate.TranslateElement.getInstance().setEnabled(true);
+            google.translate.TranslateElement.getInstance().setLanguage('en');
+        }
+    }
+    
+       </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+    <script>
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en', // Default language of your site
+            includedLanguages: 'ar,en', // Languages you want to include
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        googleTranslateElementInit();
+    });
+    
+    </script>
 </body>
 
 </html>
