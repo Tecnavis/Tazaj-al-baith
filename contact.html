@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
-    <title>Tazaj-al-baith</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Tazaj al baith</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -14,7 +15,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,54 +33,230 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="...">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</head>
-
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1> -->
-                    <img src="img/tazaj-logo.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <div id="google_translate_element"></div>
-                        <a href="index.html" class="nav-item nav-link ">Home</a>
-                        <a href="index.html" class="nav-item nav-link">About</a>
-                        <a href="index.html" class="nav-item nav-link">Service</a>
-                        <a href="index.html" class="nav-item nav-link">Menu</a>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div> -->
-                        <!-- <a href="contact.html" class="nav-item nav-link active">Contact</a> -->
-                    </div>
-                    <!-- <a href="" class="btn btn-primary py-2 px-4">Book A Table</a> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ar' // Add more languages here if needed
+            }, 'google_translate_element');
+        }
+    
+        function changeLanguage(language) {
+            var selectField = document.querySelector("#google_translate_element select");
+            for (var i = 0; i < selectField.options.length; i++) {
+                if (selectField.options[i].value === language) {
+                    selectField.selectedIndex = i;
+                    selectField.dispatchEvent(new Event('change'));
+                    break;
+                }
+            }
+    
+            // Hide the Google Translate toolbar
+            hideGoogleTranslateToolbar();
+        }
+    
+        function hideGoogleTranslateToolbar() {
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = `
+                .goog-te-banner-frame { display: none !important; }
+                .goog-te-gadget-icon { display: none !important; }
+                .goog-te-menu-frame.skiptranslate { display: none !important; }
+                .goog-te-banner-frame.skiptranslate { display: none !important; }
+                .goog-te-gadget-simple { display: none !important; }
+                body { top: 0px !important; }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        .typing-logo {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 4em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+    
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+    
+            to {
+                width: 100%;
+            }
+        }
+    
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+    
+            50% {
+                border-color: black;
+            }
+        }
+    
+        .sticky-navbar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #fff;
+            padding: 10px;
+        }
+    
+        @keyframes jump {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+    
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    
+        .logo-jump {
+            animation: jump 1s ease-in-out;
+        }
+    
+        .video-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    
+        .social-icons a {
+            font-size: 32px;
+        }
+    
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+    
+        @media (max-width: 767px) {
+            .social-icons a {
+                font-size: 48px;
+            }
+    
+            .social-icons {
+                margin-top: 20px;
+            }
+        }
+    
+        .vibrating-icon {
+            display: inline-block;
+            animation: vibrate 0.3s linear infinite;
+        }
+    
+        @keyframes vibrate {
+            0% {
+                transform: translate(0);
+            }
+    
+            20% {
+                transform: translate(-2px, 2px);
+            }
+    
+            40% {
+                transform: translate(-2px, -2px);
+            }
+    
+            60% {
+                transform: translate(2px, 2px);
+            }
+    
+            80% {
+                transform: translate(2px, -2px);
+            }
+    
+            100% {
+                transform: translate(0);
+            }
+        }
+    
+        .translate-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .translate-button:hover {
+            background-color: #0056b3;
+        }
+    
+        .translate-button .fa-language {
+            margin-right: 8px;
+        }
+    
+        .dropdown-menu a {
+            cursor: pointer;
+        }
+    </style>
+    
+    <body>
+        <div class="container-xxl bg-white p-0">
+            <!-- Spinner Start -->
+            <div id="spinner"
+                class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
                 </div>
-            </nav>
-
+            </div>
+            <!-- Spinner End -->
+    
+            <!-- Navbar & Hero Start -->
+            <div class="container-xxl position-relative p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                    <a href="" class="navbar-brand p-0">
+                        <img src="img/tazaj-w&r.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0 pe-4">
+                            <a href="index.html" class="nav-item nav-link " data-translate="home">Home</a>
+                            <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
+                            <a href="#service" class="nav-item nav-link" data-translate="service">Service</a>
+                            <a href="#menu" class="nav-item nav-link" data-translate="menu">Menu</a>
+                            <a href="contact.html" class="nav-item nav-link active" data-translate="menu">Contact</a>
+                        </div>
+                    </div>
+    
+                    <div class="dropdown" style="padding-left: 10px;">
+                        <button class="translate-button btn btn-primary dropdown-toggle py-2 px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-language"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">Arabic</a></li>
+                            <!-- Add more languages as needed -->
+                        </ul>
+                    </div>
+                    <div id="google_translate_element" style="display: none;"></div>
+                </nav>
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 
                 <div class="container my-5 py-5">
@@ -361,34 +540,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        function translatePage(lang) {
-        if (lang === 'ar') {
-            google.translate.TranslateElement.getInstance().setEnabled(true);
-            google.translate.TranslateElement.getInstance().setLanguage('ar');
-        } else if (lang === 'en') {
-            google.translate.TranslateElement.getInstance().setEnabled(true);
-            google.translate.TranslateElement.getInstance().setLanguage('en');
-        }
-    }
-    
-       </script>
-        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        
-    <script>
-        function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en', // Default language of your site
-            includedLanguages: 'ar,en', // Languages you want to include
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        googleTranslateElementInit();
-    });
-    
-    </script>
+   
 </body>
 
 </html>
