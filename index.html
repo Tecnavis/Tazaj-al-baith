@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tazaj al baith</title>
+    <title>Tazaj Al Baith</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -53,6 +53,26 @@
     
             // Hide the Google Translate toolbar
             hideGoogleTranslateToolbar();
+
+            console.log(language, "lan")
+
+            // show and hide words
+            if (language === 'ar') {
+                document.querySelectorAll('.word-arabic').forEach(function(el) {
+                    el.style.display = 'inline-block';
+                });
+                document.querySelectorAll('.word-english').forEach(function(el) {
+                    el.style.display = 'none';
+                });
+            } else if (language === 'en') {
+                document.querySelectorAll('.word-arabic').forEach(function(el) {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('.word-english').forEach(function(el) {
+                    el.style.display = 'inline-block';
+                });
+            }
+
         }
     
         function hideGoogleTranslateToolbar() {
@@ -265,7 +285,9 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <img src="img/tazaj--logo.png" alt="Logo" class="logo-jump" style="height: 200px;">
                             <h1 class="display-3 text-white animated slideInLeft" >Delicious <br> Discoveries</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Welcome to Tazaj Al Baith! Discover our mouth-watering menu featuring Fresh burgers, Broasted chicken, and savory sandwiches. Each dish is crafted with fresh ingredients to satisfy your cravings. Explore our offerings and enjoy delicious flavors brought straight to your table.</p>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Welcome to <span class="word-arabic"  >طازج البيت</span>
+                                <span class="word-english" ><span class="word-arabic"  >طازج البيت</span>
+                                <span class="word-english" >Tazaj Al Baith!</span></span> Discover our mouth-watering menu featuring Fresh burgers, Broasted chicken, and savory sandwiches. Each dish is crafted with fresh ingredients to satisfy your cravings. Explore our offerings and enjoy delicious flavors brought straight to your table.</p>
                             <a href="contact.html"
                                 class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Contact us</a>
                         </div>
@@ -306,7 +328,7 @@
         <!-- Service Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <h1 style="text-align: center;"> our stores</h1>
+                <h1 style="text-align: center;"> Our stores</h1>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
@@ -395,14 +417,21 @@
                     </div>
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Tazaj Al baith</h1>
-                        <p class="mb-4">At Tazaj Al Baith, we are dedicated to serving delicious and high-quality food
+                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>
+                            <span class="word-arabic"  >طازج البيت</span>
+                            <span class="word-english" >Tazaj Al Baith!</span></h1>
+                        <p class="mb-4">At 
+                            <span class="word-arabic"  >طازج البيت</span>
+                            <span class="word-english" >Tazaj Al Baith!</span>
+                            
+                            we are dedicated to serving delicious and high-quality food
                             to our valued customers. Our menu features a variety of mouth-watering options, including
                             crispy fried chicken, golden fries, hearty sandwiches, juicy burgers, and flavorful wraps.
 
                         </p>
                         <p class="mb-4">Whether you're looking for a quick bite, a family meal, or a place to relax with
-                            friends, Tazaj Al Baith is the perfect destination. Come and taste the difference today!
+                            friends,   <span class="word-arabic"  >طازج البيت</span>
+                            <span class="word-english" >Tazaj Al Baith!</span>is the perfect destination. Come and taste the difference today!
 
                         </p>
                         <div class="row g-4 mb-4">
@@ -1133,7 +1162,8 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Tazaj al baith</a>, All Right Reserved.
+                            &copy; <a class="border-bottom" href="#"><span class="word-arabic"  >طازج البيت</span>
+                                <span class="word-english" >Tazaj Al Baith!</span></a>, All Right Reserved.
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed and developed By <a class="border-bottom"
