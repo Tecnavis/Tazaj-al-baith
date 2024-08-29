@@ -34,6 +34,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript">
+
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
@@ -42,6 +43,8 @@
         }
     
         function changeLanguage(language) {
+            language = language || 'en';
+
             var selectField = document.querySelector("#google_translate_element select");
             for (var i = 0; i < selectField.options.length; i++) {
                 if (selectField.options[i].value === language) {
@@ -88,6 +91,9 @@
             `;
             document.head.appendChild(style);
         }
+        window.addEventListener('load', function() {
+        changeLanguage('en'); // Set default language to 'en'
+    });
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <style>
@@ -328,7 +334,8 @@
         <!-- Service Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <h1 style="text-align: center;"> Our stores</h1>
+                <h1 style="text-align: center;"> <span class="word-arabic"  >مطاعمنا</span>
+                            <span class="word-english" >Our Stores</span></h1>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
@@ -665,10 +672,11 @@
                                             style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Zinger</span>
+                                                <span><span class="word-arabic"  >زنجر دجاج</span>
+                                    <span class="word-english" >Chiken Zinger</span></span>
                                                 <span class="text-primary">11SR</span>
                                             </h5>
-                                            <small class="fst-italic">زنجر دجاج</small>
+                                            <!-- <small class="fst-italic">زنجر دجاج</small> -->
                                         </div>
                                     </div>
                                 </div>
@@ -681,7 +689,7 @@
                                                 <span>Steak sandwich</span>
                                                 <span class="text-primary">12SR</span>
                                             </h5>
-                                            <small class="fst-italic">ساندوتش ستيك
+                                            <!-- <small class="fst-italic">ساندوتش ستيك -->
                                             </small>
                                         </div>
                                     </div>
@@ -692,7 +700,8 @@
                                             alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chiken Fajthas</span>
+                                                <span><span class="word-arabic"  >فاهيتا دجاج</span>
+                                    <span class="word-english" >Chiken Fajthas</span></span>
                                                 <span class="text-primary">12SR</span>
                                             </h5>
                                             <small class="fst-italic"></small>
@@ -709,7 +718,7 @@
                                                 <span>Albaith Sandwich</span>
                                                 <span class="text-primary">12SR</span>
                                             </h5>
-                                            <small class="fst-italic">ساندوتش البيت</small>
+                                            <!-- <small class="fst-italic">ساندوتش البيت</small> -->
                                         </div>
                                     </div>
                                 </div>
@@ -719,7 +728,8 @@
                                             alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Fish Fillet Roll</span>
+                                               <span><span class="word-arabic"  >رول سمك فيليه</span>
+                                    <span class="word-english" >Fish Filler Roll</span></span>
                                                 <span class="text-primary">10/12SR</span>
                                             </h5>
                                             <small class="fst-italic"></small>
@@ -802,7 +812,9 @@
                                             alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Nuggets</span>
+                                               <span><span class="word-arabic"  >مسحب دجاج</span>
+                                    <span class="word-english" >Chiken Nuggets</span></span>
+
                                                 <span class="text-primary">19SR</span>
                                             </h5>
                                             <small class="fst-italic"></small>
@@ -841,7 +853,8 @@
                                             alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Shrimp plate</span>
+                                              <span><span class="word-arabic"  >روبيان صحن</span>
+                                    <span class="word-english" >Shrimp Plate</span></span>
                                                 <span class="text-primary">26SR</span>
                                             </h5>
                                             <small class="fst-italic"></small>
@@ -854,7 +867,8 @@
                                             alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Quesedilla</span>
+<span><span class="word-arabic"  >كاساديا دجاج</span>
+                                    <span class="word-english" >Chicken Quesedilla</span></span>
                                                 <span class="text-primary">15SR</span>
                                             </h5>
                                             <small class="fst-italic"></small>
@@ -867,7 +881,8 @@
                                             alt="" style="width: 80px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>cheezy Fries Chicken </span>
+                                                <span><span class="word-arabic"  >تشيكن فرايز</span>
+                                    <span class="word-english" >Cheezy Fies Chicken</span></span>
                                                 <span class="text-primary">16SR</span>
                                             </h5>
                                             <small class="fst-italic"></small>
